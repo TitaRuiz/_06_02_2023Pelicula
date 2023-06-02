@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Peliculas</title>
+</head>
+<body>
+<h1>Cartelera</h1>
+<table width="80%">
+  <tbody>
+      <tr th:each="p : ${peliculas}">
+        <td>
+          <img th:src="@{${p.urlImagen}}" width="250"/>
+        </td>
+        <td>
+         <p>[[${p.titulo}]]</p>
+          <p>[[${p.sinopsis}]]</p>
+          <p>[[${p.clasificacion}]]</p>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
+</body>
+</html>
